@@ -20,22 +20,36 @@ require('helpers.inc.php');
 
     <div class="row">
         <div id="weekly_planner">
+            <?php
+            $class_today = [
+                0 => '',
+                1 => '',
+                2 => '',
+                3 => '',
+                4 => '',
+                5 => '',
+                6 => '',
+            ];
+            $class_today[((int) date('N')) - 1] = ' class="today"';
+            ?>
+
             <table>
                 <tr>
                     <th></th>
-                    <th>Lundi</th>
-                    <th>Mardi</th>
-                    <th>Mercredi</th>
-                    <th>Jeudi</th>
-                    <th>Vendredi</th>
-                    <th>Samedi</th>
-                    <th>Dimanche</th>
+                    <th<?php echo $class_today[0]; ?>>Lundi</th>
+                    <th<?php echo $class_today[1]; ?>>Mardi</th>
+                    <th<?php echo $class_today[2]; ?>>Mercredi</th>
+                    <th<?php echo $class_today[3]; ?>>Jeudi</th>
+                    <th<?php echo $class_today[4]; ?>>Vendredi</th>
+                    <th<?php echo $class_today[5]; ?>>Samedi</th>
+                    <th<?php echo $class_today[6]; ?>>Dimanche</th>
                 </tr>
     
                 <?php
                 $class_special = ' class="special"';
     
                 $categories = $db->query('SELECT * FROM weekly_categories ORDER BY priority DESC, name ASC;');
+                
     
                 while($category = $categories->fetchObject()) {
                     $tasks = $db->prepare('SELECT id, title, done, WEEKDAY(deadline) AS day
@@ -114,25 +128,25 @@ require('helpers.inc.php');
                 ?>
                 <tr>
                     <th class="italic">Autres</th>
-                    <td>
+                    <td<?php echo $class_today[0]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[0]); ?>
                     </td>
-                    <td>
+                    <td<?php echo $class_today[1]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[1]); ?>
                     </td>
-                    <td>
+                    <td<?php echo $class_today[2]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[2]); ?>
                     </td>
-                    <td>
+                    <td<?php echo $class_today[3]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[3]); ?>
                     </td>
-                    <td>
+                    <td<?php echo $class_today[4]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[4]); ?>
                     </td>
-                    <td>
+                    <td<?php echo $class_today[5]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[5]); ?>
                     </td>
-                    <td>
+                    <td<?php echo $class_today[6]; ?>>
                         <?php weekly_planner_echo_tasks($tasks_array[6]); ?>
                     </td>
                 </tr>

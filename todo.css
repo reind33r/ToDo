@@ -147,7 +147,12 @@ table td {
 }
 
 #weekly_planner table td.special {
-    background: #ffcbb6;
+    background: #fee6dd;
+}
+
+#weekly_planner table th.today {
+    background: #00495f !important;
+    color: #ffffff;
 }
 
 /* STICKY NOTES */
