@@ -1,0 +1,261 @@
+/* GENERAL */
+:root {
+    --accent: #ff9d00;
+    --bg: #00aeff;
+}
+
+h1, h3, div, p, table, header {
+    margin-bottom: 1rem;
+}
+h1:last-child, h3:last-child, div:last-child, p:last-child, table:last-child {
+    margin-bottom: 0;
+}
+
+body {
+    background: var(--bg);
+    color: #FFFFFF;
+    font-family: serif;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    padding: 1rem;
+    background: #000000;
+    color: #FFFFFF;
+}
+header h1 {
+    text-align: center;
+    margin-bottom: 0;
+    display: inline;
+}
+header h2 {
+    display: inline;
+    margin-left: 1rem;
+}
+header a {
+    float: right;
+    padding: 1rem;
+    border-bottom: .2rem solid;
+    text-decoration: none;
+    background: #FFFFFF;
+}
+header a#add_task {
+    border-color: #005500;
+    color: #005500;
+}
+header a#back {
+    border-color: #adadad;
+    color: #adadad;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+form.toggle {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+button {
+    margin: .3rem .1rem;
+}
+
+/* LAYOUT */
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#weekly_planner {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+#weekly_planner table {
+    width: 100%;
+}
+
+#undone_past {
+    margin-left: 1rem;
+}
+#categories_list {
+    margin-right: 1rem;
+}
+
+
+/* TABLES */
+table {
+    width: 100%;
+}
+table th, table td {
+    padding: 1rem;
+    border: .1rem solid #000000;
+}
+
+table th {
+    font-weight: bold;
+    text-align: center;
+
+    background: var(--accent);
+    color: #000000;
+    vertical-align: middle;
+}
+
+table td {
+    background: #ffffff;
+    color: #000000;
+}
+
+#weekly_planner table td {
+    background: #e6ffda;
+}
+
+#weekly_planner table td.special {
+    background: #ffcbb6;
+}
+
+/* STICKY NOTES */
+div.sticky {
+    display: inline-block;
+    padding: 1rem;
+
+    background: #ffd991;
+    color: #000000;
+
+    vertical-align: top;
+}
+
+div.sticky h3 {
+    text-align: center;
+}
+
+
+div.sticky.red {
+    background: #EEBBBB;
+}
+div.sticky.orange {
+    background: #ffc799;
+}
+
+div.sticky.dark {
+    background: #00495f;
+    color: #FFFFFF;
+}
+
+/* UNDONE PAST TASKS */
+.days_behind {
+    font-style: italic;
+    color: #500000;
+}
+
+/* COMING TASKS */
+.days_left {
+    font-style: italic;
+    color: #005500;
+}
+
+/* FORMS */
+form {
+    margin: auto;
+    max-width: 30rem;
+    text-align: center;
+}
+
+input, select, textarea {
+    box-sizing: border-box;
+    
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    background: inherit;
+    box-shadow: none;
+    border: none;
+    outline: none;
+
+    padding: 1rem;
+    border-bottom: .2rem solid #FFFFFF;
+
+    text-align: center;
+    font-size: 1.2em;
+}
+
+input[type="checkbox"] {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+form label {
+    font-weight: bold;
+    display: inline-block;
+    padding: .5rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+}
+
+form.form button[type="submit"] {
+    background: none;
+    border: none;
+    border-bottom: .4rem solid #005500;
+    color: #005500;
+    font-size: 1.3rem;
+    padding: 1rem;
+    cursor: pointer;
+    background: #FFFFFF;
+    margin-top: 1rem;
+}
+
+/* OTHER STYLES */
+#tips {
+    display: inline-block;
+    padding: 1rem;
+    border: .2rem dotted #FFFFFF;
+    max-width: 50vw;
+
+    font-family: sans-serif;
+}
+
+p.error {
+    font-weight: bold;
+    color: #FF0000;
+}
