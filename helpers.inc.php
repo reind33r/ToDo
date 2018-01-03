@@ -68,3 +68,27 @@ function weekly_planner_echo_tasks($tasks) {
 
     echo '</ul>';
 }
+
+
+function get_qod() {
+    try {
+        $file = file('qod.txt');
+        
+        if(date('Y-m-d') != trim($file[0])) {
+            throw new Exception('QoD is not from today -> getting a new one.');
+        }
+
+        $qod = $file[1];
+    } catch(Exception $e) {
+        $api_url = 'http://quotes.rest/qod';
+        $json = file_get_contents($api_url);
+        $data = json_decode($json, true);
+        
+        $qod = $data['contents']['quotes'][0]['quote'];
+        
+        file_put_contents('qod.txt', date('Y-m-d'));
+        file_put_contents('qod.txt', "\r\n" . $qod, FILE_APPEND | LOCK_EX);
+    }
+    
+    return $qod;
+}

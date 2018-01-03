@@ -173,6 +173,11 @@ require('helpers.inc.php');
                 echo '<p>Rien à faire... pour l\'instant !</p>';
             }
             ?>
+            
+            <div class="sticky dark">
+                <h5>Quote of the day</h5>
+                <?php echo get_qod(); ?>
+            </div>
         </div>
     </div>
 

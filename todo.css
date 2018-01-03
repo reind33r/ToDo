@@ -4,10 +4,10 @@
     --bg: #00aeff;
 }
 
-h1, h3, div, p, table, header {
+h1, h3, h5, div, p, ul, table, header {
     margin-bottom: 1rem;
 }
-h1:last-child, h3:last-child, div:last-child, p:last-child, table:last-child {
+h1:last-child, h3:last-child, h5:last-child, div:last-child, p:last-child, table:last-child {
     margin-bottom: 0;
 }
 
@@ -37,6 +37,7 @@ header h2 {
     display: inline;
     margin-left: 1rem;
 }
+
 header a {
     float: right;
     padding: 1rem;
@@ -57,7 +58,7 @@ a {
     color: inherit;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h5 {
     font-weight: bold;
 }
 
@@ -72,6 +73,11 @@ h2 {
 h3 {
     font-size: 1.5rem;
 }
+
+h5 {
+    font-size: 1.3rem;
+}
+
 
 strong {
     font-weight: bold;
@@ -140,6 +146,9 @@ table th {
 table td {
     background: #ffffff;
     color: #000000;
+}
+table td ul {
+    margin-bottom: 0;
 }
 
 #weekly_planner table td {
