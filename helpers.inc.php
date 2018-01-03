@@ -75,7 +75,7 @@ function get_qod() {
         $file = file('qod.txt');
         
         if(date('Y-m-d') != trim($file[0])) {
-            throw new Exception('QoD is not from today -> getting a new one.');
+            throw new Exception('Quote from cache is not today quote. (please catch this Exception and update the cache)');
         }
 
         $qod = $file[1];
