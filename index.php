@@ -12,6 +12,7 @@ require('helpers.inc.php');
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="todo.css">
+    <link rel="icon" href="favicon.png">
 </head>
 <body>
     <header>
