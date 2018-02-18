@@ -273,3 +273,18 @@ p.error {
     font-weight: bold;
     color: #FF0000;
 }
+
+a.edit {
+    margin-left: .4em;
+    color: #ffc799;
+}
+.red a.edit {
+    color: #ffffff;
+}
+
+li a.edit, li form.edit {
+    display: none;
+}
+li:hover a.edit, li:hover form.edit {
+    display: initial;
+}

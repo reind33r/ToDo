@@ -184,7 +184,7 @@ require('helpers.inc.php');
 
     <div class="row">
         <div class="sticky dark">
-            <form class="form" method="POST" action="add_task.php">
+            <form class="form" method="POST" action="save_task.php">
                 <input type="text" name="title" placeholder="Titre de la tâche">
     
                 <select name="weekly_category">

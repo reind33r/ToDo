@@ -26,6 +26,8 @@ function echo_past_tasks($tasks) {
                 echo $task->title;
             echo '</label>';
             echo ' <span class="days_behind">'.$task->days_behind.' jour'. pluriel($task->days_behind) .' de retard</span>';
+
+            echo '<a class="edit" href="save_task.php?id='.$task->id.'">Éditer</a>';
         echo '</li>';
     }
 
@@ -48,6 +50,9 @@ function echo_coming_tasks($tasks) {
             if($task->days_left) {
                 echo ' <span class="days_left">dans '.$task->days_left.' jour'. pluriel($task->days_left) .'</span>';
             }
+
+            echo '<a class="edit" href="save_task.php?id='.$task->id.'">Éditer</a>';
+
         echo '</li>';
     }
 
@@ -63,6 +68,7 @@ function weekly_planner_echo_tasks($tasks) {
         echo '<li>';
             echo_form_toggle($task->id, $task->done, 'planner_task_');
             echo '<label'. (($task->done) ? ' class="strike"' : '') .' for="planner_task_'.$task->id.'">'.$task->title.'</label>';
+            echo '<a class="edit" href="save_task.php?id='.$task->id.'">Éditer</a>';
         echo '</li>';
     }
 
