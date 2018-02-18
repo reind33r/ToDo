@@ -32,3 +32,7 @@ CREATE TABLE `tasks` (
  CONSTRAINT `weekly_category` FOREIGN KEY (`weekly_category_id`) REFERENCES `weekly_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
+
+### Barre de progression dans le temps
+
+Vous pouvez configurer une barre de progression dans le temps (entre une date de départ et une date d'arrivée), en copiant "countdown.inc.php.example" dans "countdown.inc.php", et en configurant les variables à l'intérieur.

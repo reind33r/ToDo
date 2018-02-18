@@ -1,0 +1,21 @@
+<?php
+// Configuration
+$name = 'Semestre de printemps';
+$start = new \DateTime('2018-02-05');
+$end = new \DateTime('2018-06-29');
+
+// No more configuration
+$now = new \DateTime('now');
+$totalDays = $start->diff($end)->days;
+$daysRemaining = $now->diff($end)->days;
+
+$remainingPercentage = round($daysRemaining / $totalDays * 100);
+$donePercentage = 100 - $remainingPercentage;
+?>
+
+<p class="progress">
+    <strong class="todo">ToDo!</strong> <?php echo $name; ?> : il reste <?php echo ceil($daysRemaining / 7); ?> semaines.
+</p>
+<div class="progress">
+    <div class="done" style="width: <?php echo $donePercentage; ?>%;"><?php echo $totalDays - $daysRemaining; ?> jours</div><div class="todo" style="width: <?php echo $remainingPercentage; ?>%;"><?php echo $daysRemaining; ?> jours (<?php echo ceil($daysRemaining / 7); ?> semaines)</div>
+</div>

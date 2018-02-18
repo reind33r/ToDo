@@ -15,9 +15,17 @@ require('helpers.inc.php');
     <link rel="icon" href="favicon.png">
 </head>
 <body>
+    <?php
+    if(file_exists('countdown.inc.php')) {
+        include 'countdown.inc.php';
+    } else {
+    ?>
     <header>
         <h1>ToDo!</h1>
     </header>
+    <?php
+    }
+    ?>
 
     <div class="row">
         <div id="weekly_planner">
