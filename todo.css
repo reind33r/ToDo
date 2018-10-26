@@ -118,6 +118,9 @@ button {
 #weekly_planner table {
     width: 100%;
 }
+#weekly_planner label {
+    color: black;
+}
 
 #undone_past {
     margin-left: 1rem;
@@ -203,7 +206,7 @@ div.sticky.dark {
 /* COMING TASKS */
 .days_left {
     font-style: italic;
-    color: #005500;
+    color: #40ba40;
 }
 
 /* FORMS */
@@ -326,4 +329,15 @@ div.done, div.todo {
     box-sizing: border-box;
     padding: .5em;
     white-space: nowrap;
+}
+
+input, select, textarea, label {
+    color: white;
+}
+
+div.sticky.red label {
+    color: black;
+}
+div.sticky.dark select {
+    background: #00495f;
 }
