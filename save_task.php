@@ -75,7 +75,7 @@ if(!empty($_POST['title']) && isset($_POST['weekly_category']) && isset($_POST['
         }
         ?>
 
-        <input type="text" name="title" placeholder="Titre de la tâche" value="<?php echo htmlspecialchars($_POST['title'] ?? $task->title ?? ''); ?>">
+        <input type="text" name="title" placeholder="Titre de la tâche" value="<?php echo htmlspecialchars($_POST['title'] ?? $task->title ?? '', null, null, false); ?>">
 
         <select name="weekly_category">
             <option value="">Sans catégorie</option>

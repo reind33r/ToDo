@@ -62,7 +62,7 @@ if(!$category = $category->fetchObject()) {
         ?>
 
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($_POST['id'] ?? $_GET['id']); ?>">
-        <input type="text" name="name" placeholder="Nom de la catégorie" value="<?php echo htmlspecialchars($_POST['name'] ?? $category->name); ?>">
+        <input type="text" name="name" placeholder="Nom de la catégorie" value="<?php echo htmlspecialchars($_POST['name'] ?? $category->name, null, null, false); ?>">
         <label for="priority">Priorité</label>
         <input type="number" id="priority" name="priority" placeholder="Priorité" value="<?php echo htmlspecialchars($_POST['priority'] ?? $category->priority); ?>">
 
